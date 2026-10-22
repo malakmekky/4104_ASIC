@@ -1,0 +1,66 @@
+module instruction_memory_tb();
+logic [31:0] i_addr;
+logic [31:0] o_instruction;
+
+instruction_memory  #(
+        .Mem_DEPTH(256),
+        .ISTRUCT_file("imem_test.hex")
+    ) u_instruction_memory_1 (
+        .i_addr(i_addr),
+        .o_instruction(o_instruction)
+    );
+	 
+	 
+	 initial begin
+	 //testing a random instruction file
+	 #10;
+
+	 i_addr = 32'd0;
+	 
+	 if(o_instruction !== 32'h20010007)
+	 $error("Error in test 1, expected 20010007, we got: %h",o_instruction);
+else
+$display ("test 1 works");
+
+
+
+//test 2
+
+#10;
+i_addr = 32'd4;
+	 
+	 if(o_instruction !== 32'h20020003)
+	 $error("Error in test 2, expected 20020003, we got: %h",o_instruction);
+else
+$display ("test 2 works, address 4");
+
+//test 3
+
+#10;
+i_addr = 32'd8;
+	 
+	 if(o_instruction !== 32'h00221820)
+	 $error("Error in test 3, expected 00221820, we got: %h",o_instruction);
+else
+$display ("test 3 works, address 8");
+
+//test 4
+
+#10;
+i_addr = 32'd12;
+	 
+	 if(o_instruction !== 32'h00222022)
+	 $error("Error in test 3, expected 00222022, we got: %h",o_instruction);
+else
+$display ("test 3 works, address 12");
+
+display("instruction_memory test complete");
+$finish;
+
+end
+
+endmodule
+
+
+
+	 
