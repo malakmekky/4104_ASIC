@@ -4,7 +4,16 @@ module mips_single_cycle #(
     input  logic        clk,
     input  logic        rst_n,
     output logic [31:0] o_pc,
-    output logic [31:0] o_instruction
+    output logic [31:0] o_instruction,
+
+    // Debug outputs for the FPGA wrapper. They also stop synthesis from
+    // removing the datapath, since o_pc/o_instruction alone don't depend on it.
+    output logic        o_reg_write,
+    output logic [4:0]  o_write_reg,
+    output logic [31:0] o_write_data,
+    output logic        o_mem_write,
+    output logic [31:0] o_alu_result,
+    output logic [31:0] o_mem_write_data
 );
 
     // Main control signals
@@ -200,5 +209,14 @@ module mips_single_cycle #(
         .i_jump          (jump),
         .o_next_pc       (next_pc)
     );
+
+    // 15. Debug Outputs
+
+    assign o_reg_write      = reg_write;
+    assign o_write_reg      = write_reg;
+    assign o_write_data     = write_data;
+    assign o_mem_write      = mem_write;
+    assign o_alu_result     = alu_result;
+    assign o_mem_write_data = reg_data2;
 
 endmodule
