@@ -9,6 +9,14 @@ output logic [31:0] o_read_data
 
 logic [31:0] mem [0 :255];
 
+
+// Load the starting values into data memory
+    initial begin
+        $readmemh("array_data.hex", mem);
+    end 
+
+
+
 always_ff @(posedge clk)
 begin
 if(i_mem_write)

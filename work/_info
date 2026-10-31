@@ -1,0 +1,580 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/gm523/Desktop/ASIC PROJ
+T_opt
+!s110 1793282429
+VFlX8bEfi^QAP;hgn@DTM:0
+Z2 04 20 4 work mips_single_cycle_tb fast 0
+=1-e454e809af95-6ae3517d-1e3-3344
+Z3 !s124 OEM10U41 
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2021.2;73
+T_opt1
+!s110 1793208486
+V3743=Ajl7[6RE;zSOTldM0
+04 22 4 work data_memory_wrapper_tb fast 0
+=1-e454e809af95-6ae230a6-15d-36fc
+!s124 OEM10U2 
+R4
+R5
+n@_opt1
+R6
+R1
+T_opt2
+!s110 1793209169
+VZo02a>l[m7j<<hJDf:Gbi1
+R2
+=1-e454e809af95-6ae23351-19e-23ec
+R3
+R4
+R5
+n@_opt2
+R6
+R1
+valu
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 !s110 1793282392
+!i10b 1
+!s100 dlQemmT<UZM[FEL>[QF^d2
+ISSUOQI;inTFGe`BaVzkFG0
+S1
+Z9 dC:/Users/gm523/Desktop/project
+w1793007602
+8C:/Users/gm523/Desktop/project/alu.sv
+FC:/Users/gm523/Desktop/project/alu.sv
+!i122 238
+L0 2 22
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+Z11 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z12 !s108 1793282392.000000
+!s107 C:/Users/gm523/Desktop/project/alu.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/alu.sv|
+!i113 0
+Z13 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+valu_control
+R7
+R8
+!i10b 1
+!s100 51MEJFzbF2K3aHm0;NY072
+I;_S?C6C_g;;@a1_:G`@jg2
+S1
+R9
+w1793007606
+8C:/Users/gm523/Desktop/project/alu_control.sv
+FC:/Users/gm523/Desktop/project/alu_control.sv
+!i122 239
+L0 2 30
+R10
+R11
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/gm523/Desktop/project/alu_control.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/alu_control.sv|
+!i113 0
+R13
+R5
+valu_control_tb
+R7
+R8
+!i10b 1
+!s100 624al8L<fT>7T`ZDIkc?o1
+IhH`g@WPFXZ`LcW3SlC<:m1
+S1
+R9
+w1793026706
+8C:/Users/gm523/Desktop/project/alu_control_tb.sv
+FC:/Users/gm523/Desktop/project/alu_control_tb.sv
+!i122 240
+L0 3 62
+R10
+R11
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/gm523/Desktop/project/alu_control_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/alu_control_tb.sv|
+!i113 0
+R13
+R5
+valu_tb
+R7
+R8
+!i10b 1
+!s100 QzIE4Wfa2oj[z8mmb>:Bb3
+I??QNKCVR9hSf5`Anl<g<[2
+S1
+R9
+w1793026715
+8C:/Users/gm523/Desktop/project/alu_tb.sv
+FC:/Users/gm523/Desktop/project/alu_tb.sv
+!i122 241
+L0 3 78
+R10
+R11
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/gm523/Desktop/project/alu_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/alu_tb.sv|
+!i113 0
+R13
+R5
+vdata_memory_wrapper
+R7
+R8
+!i10b 1
+!s100 B@Qb<U=aaz82PNM^RZ3Mz2
+I`cRNo1CJ2XoPUB`kWULXL1
+S1
+R9
+w1793207039
+8C:/Users/gm523/Desktop/project/data_memory_wrapper.sv
+FC:/Users/gm523/Desktop/project/data_memory_wrapper.sv
+!i122 242
+L0 1 35
+R10
+R11
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/gm523/Desktop/project/data_memory_wrapper.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/data_memory_wrapper.sv|
+!i113 0
+R13
+R5
+vdata_memory_wrapper_tb
+R7
+R8
+!i10b 1
+!s100 1UM3LdhQl7=@a:Bi@TnC<2
+I6Y`_Lj8G:U`]UPQG=ATRb3
+S1
+R9
+w1792608259
+8C:/Users/gm523/Desktop/project/data_memory_wrapper_tb.sv
+FC:/Users/gm523/Desktop/project/data_memory_wrapper_tb.sv
+!i122 243
+L0 1 78
+R10
+R11
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/gm523/Desktop/project/data_memory_wrapper_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/data_memory_wrapper_tb.sv|
+!i113 0
+R13
+R5
+vimm_extender
+R7
+R8
+!i10b 1
+!s100 Ua7J5_Nd@A=UMCJV6EXGA2
+IE51zSX4Ui^9_NBW]1G?Ze0
+S1
+R9
+w1793009122
+8C:/Users/gm523/Desktop/project/imm_extender.sv
+FC:/Users/gm523/Desktop/project/imm_extender.sv
+!i122 244
+L0 1 9
+R10
+R11
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/gm523/Desktop/project/imm_extender.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/imm_extender.sv|
+!i113 0
+R13
+R5
+vimm_extender_tb
+R7
+R8
+!i10b 1
+!s100 [X?6:<9QkUmn=Tm4SoMlX0
+I:][^I]DLI[_h]o5=PRUhl3
+S1
+R9
+w1792619180
+8C:/Users/gm523/Desktop/project/imm_extender_tb.sv
+FC:/Users/gm523/Desktop/project/imm_extender_tb.sv
+!i122 245
+L0 1 63
+R10
+R11
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/gm523/Desktop/project/imm_extender_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/imm_extender_tb.sv|
+!i113 0
+R13
+R5
+vinstruction_memory
+R7
+R8
+!i10b 1
+!s100 NKBzaOANo8cX^_S`l@9R<2
+IJ@ZmaK[c4W8hEjBkRWo6J2
+S1
+R9
+w1793206359
+8C:/Users/gm523/Desktop/project/instruction_memory.sv
+FC:/Users/gm523/Desktop/project/instruction_memory.sv
+!i122 246
+L0 1 19
+R10
+R11
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/gm523/Desktop/project/instruction_memory.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/instruction_memory.sv|
+!i113 0
+R13
+R5
+vinstruction_memory_tb
+R7
+Z14 !s110 1793282393
+!i10b 1
+!s100 VEdfNc[BRLALlL;]NS=<P3
+IgNlZzf2Ri`WE;72PlT>nm0
+S1
+R9
+w1793045841
+8C:/Users/gm523/Desktop/project/instruction_memory_tb.sv
+FC:/Users/gm523/Desktop/project/instruction_memory_tb.sv
+!i122 247
+L0 3 52
+R10
+R11
+r1
+!s85 0
+31
+Z15 !s108 1793282393.000000
+!s107 C:/Users/gm523/Desktop/project/instruction_memory_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/instruction_memory_tb.sv|
+!i113 0
+R13
+R5
+vmain_control
+R7
+R14
+!i10b 1
+!s100 fIWnf1F4SNHaDO7WeR4Sg0
+IOY<jne1TIoi2cBV_[BX`F2
+S1
+R9
+w1793007714
+8C:/Users/gm523/Desktop/project/main_control.sv
+FC:/Users/gm523/Desktop/project/main_control.sv
+!i122 248
+L0 4 77
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/gm523/Desktop/project/main_control.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/main_control.sv|
+!i113 0
+R13
+R5
+vmain_control_tb
+R7
+R14
+!i10b 1
+!s100 1nhUI6I>ikzo;lXSC:f_82
+IQkLCQAEh^aX1X4N>3OID13
+S1
+R9
+w1793007719
+8C:/Users/gm523/Desktop/project/main_control_tb.sv
+FC:/Users/gm523/Desktop/project/main_control_tb.sv
+!i122 249
+L0 4 66
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/gm523/Desktop/project/main_control_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/main_control_tb.sv|
+!i113 0
+R13
+R5
+vmips_single_cycle
+R7
+R14
+!i10b 1
+!s100 :D3SCgS]hWzekG7l00>:N3
+Inha^6ja^6JFf>]zDRN>g00
+S1
+R9
+w1793282375
+8C:/Users/gm523/Desktop/project/mips_single_cycle.sv
+FC:/Users/gm523/Desktop/project/mips_single_cycle.sv
+!i122 251
+L0 1 204
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/gm523/Desktop/project/mips_single_cycle.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/mips_single_cycle.sv|
+!i113 0
+R13
+R5
+vmips_single_cycle_tb
+R7
+R14
+!i10b 1
+!s100 FHgFh0Bz]5Q;S?_0Xm9D[1
+IW?c`ICjHRl?eaFK4eOFP<3
+S1
+R9
+w1793281796
+8C:/Users/gm523/Desktop/project/mips_single_cycle_tb.sv
+FC:/Users/gm523/Desktop/project/mips_single_cycle_tb.sv
+!i122 252
+L0 3 275
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/gm523/Desktop/project/mips_single_cycle_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/mips_single_cycle_tb.sv|
+!i113 0
+R13
+R5
+vnext_pc_logic
+R7
+R14
+!i10b 1
+!s100 4NCRgon=GONhkOeCXhkf:3
+IVlBNgA:QcefnCo<d?8bnY2
+S1
+R9
+w1792360279
+8C:/Users/gm523/Desktop/project/next_pc_logic.sv
+FC:/Users/gm523/Desktop/project/next_pc_logic.sv
+!i122 253
+L0 1 20
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/gm523/Desktop/project/next_pc_logic.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/next_pc_logic.sv|
+!i113 0
+R13
+R5
+vnext_pc_logic_tb
+R7
+R14
+!i10b 1
+!s100 gEN<[`]8ZBFX`<6hNh0ob1
+ISVFgNMmL8`ig3Yo;]3aI[0
+S1
+R9
+w1792359995
+8C:/Users/gm523/Desktop/project/next_pc_logic_tb.sv
+FC:/Users/gm523/Desktop/project/next_pc_logic_tb.sv
+!i122 254
+L0 1 80
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/gm523/Desktop/project/next_pc_logic_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/next_pc_logic_tb.sv|
+!i113 0
+R13
+R5
+vpc_reg
+R7
+R14
+!i10b 1
+!s100 AZ?Ih>mM[UIGW?@O?]Pel1
+IMC5OQ7_hPNKak`A`0WKh=1
+S1
+R9
+w1792261686
+8C:/Users/gm523/Desktop/project/pc_reg.sv
+FC:/Users/gm523/Desktop/project/pc_reg.sv
+!i122 255
+L0 1 16
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/gm523/Desktop/project/pc_reg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/pc_reg.sv|
+!i113 0
+R13
+R5
+vpc_reg_tb
+R7
+R14
+!i10b 1
+!s100 CW3J5CeiNSKn:KH]BL0l03
+IbLLJ[OR_G]@NnZ2KK@4C<2
+S1
+R9
+w1792264814
+8C:/Users/gm523/Desktop/project/pc_reg_tb.sv
+FC:/Users/gm523/Desktop/project/pc_reg_tb.sv
+!i122 256
+L0 1 72
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/gm523/Desktop/project/pc_reg_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/pc_reg_tb.sv|
+!i113 0
+R13
+R5
+vregister_file
+R7
+Z16 !s110 1793282394
+!i10b 1
+!s100 JzzkG=Dimbh4SGA5RLJoS2
+I`T3JzSQ9flBa[GG2MW1Vo0
+S1
+R9
+w1793282339
+8C:/Users/gm523/Desktop/project/register_file.sv
+FC:/Users/gm523/Desktop/project/register_file.sv
+!i122 257
+L0 1 33
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/gm523/Desktop/project/register_file.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/register_file.sv|
+!i113 0
+R13
+R5
+vregister_file_tb
+R7
+R16
+!i10b 1
+!s100 z_F7HgSP<i?_51Zk;^`WG0
+I[dJdM?^HV;hJm=U_OSmD71
+S1
+R9
+w1792518998
+8C:/Users/gm523/Desktop/project/register_file_tb.sv
+FC:/Users/gm523/Desktop/project/register_file_tb.sv
+!i122 258
+L0 1 108
+R10
+R11
+r1
+!s85 0
+31
+!s108 1793282394.000000
+!s107 C:/Users/gm523/Desktop/project/register_file_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/register_file_tb.sv|
+!i113 0
+R13
+R5
+vtb
+R7
+R14
+!i10b 1
+!s100 TChV7RH7PUbigbAk_Ga[]3
+IZ423QX][kM0P6fZkj:@R02
+S1
+R9
+w1793044422
+8C:/Users/gm523/Desktop/project/memory_tb.sv
+FC:/Users/gm523/Desktop/project/memory_tb.sv
+!i122 250
+L0 4 17
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/gm523/Desktop/project/memory_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/gm523/Desktop/project/memory_tb.sv|
+!i113 0
+R13
+R5

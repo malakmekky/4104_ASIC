@@ -1,31 +1,19 @@
 module instruction_memory #(
-parameter Mem_DEPTH =256,
-parameter ISTRUCT_file = ""
-)
-
-(
-
-input logic [31:0] i_addr,
- output logic [31:0] o_instruction
-
+    parameter Mem_DEPTH = 256,
+    parameter ISTRUCT_file = "test_alu.hex"
+)(
+    input  logic [31:0] i_addr,
+    output logic [31:0] o_instruction
 );
 
-logic [31:0] mem [0 : Mem_DEPTH-1];
+    logic [31:0] mem [0:Mem_DEPTH-1];
 
-initial begin
-if(ISTRUCT_file != "")
+    initial begin
+        $readmemh(ISTRUCT_file, mem);
+    end
 
-$readmemh(ISTRUCT_file , mem);
+    always_comb begin
+        o_instruction = mem[i_addr[9:2]];
+    end
 
-end
-
-always_comb begin
-
- o_instruction = mem[i_addr[9:2]];
- end
- 
- endmodule
-
-
-
-
+endmodule

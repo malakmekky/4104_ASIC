@@ -1,0 +1,92 @@
+# Compile of alu.sv was successful.
+# Compile of alu_control.sv was successful.
+# Compile of alu_control_tb.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of data_memory_wrapper.sv was successful.
+# Compile of data_memory_wrapper_tb.sv was successful.
+# Compile of imm_extender.sv was successful.
+# Compile of imm_extender_tb.sv was successful.
+# Compile of instruction_memory.sv was successful.
+# Compile of instruction_memory_tb.sv was successful.
+# Compile of main_control.sv was successful.
+# Compile of main_control_tb.sv was successful.
+# Compile of memory_tb.sv was successful.
+# Compile of mips_single_cycle.sv was successful.
+# Compile of mips_single_cycle_tb.sv was successful.
+# Compile of next_pc_logic.sv was successful.
+# Compile of next_pc_logic_tb.sv was successful.
+# Compile of pc_reg.sv was successful.
+# Compile of pc_reg_tb.sv was successful.
+# Compile of register_file.sv failed with 1 errors.
+# Compile of register_file_tb.sv was successful.
+# 21 compiles, 1 failed with 1 error.
+# Compile of alu.sv was successful.
+# Compile of alu_control.sv was successful.
+# Compile of alu_control_tb.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of data_memory_wrapper.sv was successful.
+# Compile of data_memory_wrapper_tb.sv was successful.
+# Compile of imm_extender.sv was successful.
+# Compile of imm_extender_tb.sv was successful.
+# Compile of instruction_memory.sv was successful.
+# Compile of instruction_memory_tb.sv was successful.
+# Compile of main_control.sv was successful.
+# Compile of main_control_tb.sv was successful.
+# Compile of memory_tb.sv was successful.
+# Compile of mips_single_cycle.sv was successful.
+# Compile of mips_single_cycle_tb.sv was successful.
+# Compile of next_pc_logic.sv was successful.
+# Compile of next_pc_logic_tb.sv was successful.
+# Compile of pc_reg.sv was successful.
+# Compile of pc_reg_tb.sv was successful.
+# Compile of register_file.sv was successful.
+# Compile of register_file_tb.sv was successful.
+# 21 compiles, 0 failed with no errors.
+vsim work.mips_single_cycle_tb
+# vsim work.mips_single_cycle_tb 
+# Start time: 17:00:29 on Oct 29,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.mips_single_cycle_tb(fast)
+run -all
+# ======================================
+#  MIPS SINGLE-CYCLE PROCESSOR TEST
+# ======================================
+# 
+# --- TEST 1: ALU ---
+# T1 R1 passed
+# T1 R2 passed
+# T1 R3 passed
+# T1 R4 passed
+# T1 R5 passed
+# T1 R6 passed
+# T1 R7 passed
+# T1 R8 passed
+# T1 R9 passed
+# 
+# --- TEST 2: MEMORY ---
+# T2 R1 passed
+# T2 R2 passed
+# T2 R3 passed
+# T2 memory word 16 passed
+# 
+# --- TEST 3: CONTROL ---
+# T3 R1 passed
+# T3 R2 passed
+# T3 R3 passed
+# 
+# --- TEST 4: ARRAY SUM ---
+# T4 R1 passed
+# T4 R2 passed
+# T4 R3 passed
+# T4 R4 passed
+# T4 R7 passed
+# T4 memory word 4 passed
+# 
+# ======================================
+# ALL TESTS PASSED
+# ======================================
+# ** Note: $finish    : C:/Users/gm523/Desktop/project/mips_single_cycle_tb.sv(274)
+#    Time: 1016 ns  Iteration: 0  Instance: /mips_single_cycle_tb
+# 1
+# Break at C:/Users/gm523/Desktop/project/mips_single_cycle_tb.sv line 274

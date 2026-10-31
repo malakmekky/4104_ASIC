@@ -1,5 +1,3 @@
-`timescale 1ns/1ps
-
 module imm_extender (
     input logic [15:0] i_immediate,
     input logic i_zero_extend,

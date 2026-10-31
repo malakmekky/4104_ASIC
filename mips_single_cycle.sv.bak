@@ -1,0 +1,229 @@
+module mips_single_cycle #(
+    parameter IMEM_INIT_FILE = "test_alu.hex"
+) (
+    input  logic        clk,
+    input  logic        rst_n,
+    output logic [31:0] o_pc,
+    output logic [31:0] o_instruction
+);
+
+
+
+
+
+
+//main control signals
+
+  
+    logic [5:0] opcode;
+  
+    logic reg_dst;
+    logic reg_write;
+    logic alu_src;
+    logic mem_read;
+    logic mem_write;
+    logic mem_to_reg;
+    logic branch;
+    logic jump;
+    logic imm_zero_ext;
+    logic [1:0] alu_op;
+	 
+	 
+//Pc signals
+ logic [31:0] next_pc;
+ 
+ //instruction memory
+ logic [4:0] rs;
+ logic [4:0] rt;
+ logic [4:0] rd;
+ logic [4:0] shmat;
+ logic [5:0] funct;
+ logic [15:0] immediate;
+ 
+ 
+ //register_file
+	logic [4:0]  write_reg;
+    logic [31:0] reg_data1;
+    logic [31:0] reg_data2;
+    logic [31:0] write_data;
+ // Immediate and ALU signals
+    logic [31:0] immediate_ext;
+    logic [31:0] alu_operand_b;
+    logic [31:0] alu_result;
+    logic        alu_zero;
+
+    // Memory signals
+    logic [31:0] mem_read_data;
+
+    // PC and control-flow signals
+    logic [31:0] pc_plus_4;
+    logic [31:0] branch_target;
+    logic [31:0] jump_target;
+    logic [31:0] next_pc;
+    logic        branch_taken;
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 pc_reg u_pc_reg_1(
+.clk(clk),
+.rst_n(rst_n),
+.i_next_pc(next_pc),
+.o_pc(o_pc)
+
+);
+
+instruction_memory #(
+        .INIT_FILE(IMEM_INIT_FILE)
+    ) u_instruction_memory (
+        .i_addr        (o_pc),
+        .o_instruction (o_instruction)
+    );
+
+    // Decode fields from the fetched instruction
+    assign opcode    = o_instruction[31:26];
+    assign rs        = o_instruction[25:21];
+    assign rt        = o_instruction[20:16];
+    assign rd        = o_instruction[15:11];
+    assign immediate = o_instruction[15:0];
+    assign funct     = o_instruction[5:0];
+	 
+	 
+	 main_control u_main_control_`1(
+	 
+	 .i_opcode(opcode),
+	 .o_reg_dst(reg_dst),
+	  .o_reg_write (reg_write),
+	  .o_alu_src(alu_src),
+	  .o_mem_read(mem_read),
+	  .o_mem_write(mem_write),
+	  .o_mem_to_reg(mem_to_reg),
+	  .o_branch(branch),
+	  .o_jump(jump),
+	  .o_imm_zero_ext(imm_zero_ext),
+	  .o_alu_op(alu_op)
+	 
+	 );
+	 
+	 
+	 //here we choose R type or I type (mux)
+	 if (reg_dst == 1)
+    write_reg = rd;
+else
+    write_reg = rt;
+	 
+	 
+ register_file u_register_file_1(
+ 
+    .clk(clk),
+   .i_reg_write(reg_dst),
+    .i_raddr1(rs),
+    .i_raddr2(rt),
+    .i_waddr(write_reg),
+    .i_wdata(write_data),
+    .o_rdata1(reg_data1),
+    .o_rdata2(reg_data2)
+ 
+ 
+ 
+ 
+ );
+	 
+	 
+ 
+
+    imm_extender u_imm_extender (
+        .i_immediate    (immediate),
+        .i_zero_extend  (imm_zero_ext),
+        .o_immediate_ext(immediate_ext)
+    );
+
+    
+    // ALU Source MUX
+    // Register operand or extended immediate
+  
+
+	 	  if (alu_src == 1)
+    alu_operand_b = immediate_ext;
+else
+    alu_operand_b = reg_data2;
+	 
+	  
+    //  ALU Control Unit
+
+    alu_control u_alu_control (
+        .i_alu_op  (alu_op),
+        .i_funct   (funct),
+        .o_alu_ctrl(alu_ctrl)
+    );
+
+    
+    //  Arithmetic Logic Unit
+
+    alu u_alu (
+        .i_operand_a(reg_data1),
+        .i_operand_b(alu_operand_b),
+        .i_alu_ctrl (alu_ctrl),
+        .o_result   (alu_result),
+        .o_zero     (alu_zero)
+    );
+
+    
+    //  Data Memory
+    
+
+    data_memory_wrapper u_data_memory (
+        .clk          (clk),
+        .i_mem_read   (mem_read),
+        .i_mem_write  (mem_write),
+        .i_addr       (alu_result),
+        .i_write_data (reg_data2),
+        .o_read_data  (mem_read_data)
+    );
+
+    /
+    //  Writeback MUX
+    
+    assign write_data = mem_to_reg ? mem_read_data : alu_result;
+
+    // ------------------------------------------------
+    // 12. Next-PC and Branch/Jump Logic
+    // ------------------------------------------------
+
+    assign pc_plus_4 = o_pc + 32'd4;
+
+    // Branch offset is signed and measured in words.
+    // Shift left by 2 to convert it to a byte offset.
+    assign branch_target =
+        pc_plus_4 + ({{16{immediate[15]}}, immediate} << 2);
+
+    // Standard MIPS jump-target formation
+    assign jump_target =
+        {pc_plus_4[31:28], o_instruction[25:0], 2'b00};
+
+    // Branch is taken only when the ALU comparison is equal.
+    assign branch_taken = branch & alu_zero;
+
+    next_pc_logic u_next_pc_logic (
+        .i_pc_plus_4    (pc_plus_4),
+        .i_branch_target(branch_target),
+        .i_jump_target  (jump_target),
+        .i_branch_taken (branch_taken),
+        .i_jump         (jump),
+        .o_next_pc      (next_pc)
+    );
+
+endmodule
+	 
+
+	 
+	 
+
+
+
+
+

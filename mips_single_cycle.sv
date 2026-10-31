@@ -66,7 +66,8 @@ module mips_single_cycle #(
     // 2. Instruction Memory
 
     instruction_memory #(
-        .ISTRUCT_file(ISTRUCT_file)
+       .Mem_DEPTH(256),
+		 .ISTRUCT_file(ISTRUCT_file)
     ) u_instruction_memory (
         .i_addr        (o_pc),
         .o_instruction (o_instruction)
@@ -117,7 +118,8 @@ module mips_single_cycle #(
         .i_waddr     (write_reg),
         .i_wdata     (write_data),
         .o_rdata1    (reg_data1),
-        .o_rdata2    (reg_data2)
+        .o_rdata2    (reg_data2),
+		  .rst(rst_n)
     );
 
 

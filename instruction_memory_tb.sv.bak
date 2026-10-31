@@ -2,10 +2,10 @@ module instruction_memory_tb();
 logic [31:0] i_addr;
 logic [31:0] o_instruction;
 
-instruction_memory  #(
+instruction_memory u_instruction_memory_1 #(
         .Mem_DEPTH(256),
         .ISTRUCT_file("imem_test.hex")
-    ) u_instruction_memory_1 (
+    ) dut (
         .i_addr(i_addr),
         .o_instruction(o_instruction)
     );

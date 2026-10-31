@@ -1,0 +1,139 @@
+C:/Users/gm523/Desktop/project/imm_extender.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/imm_extender.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module imm_extender
+
+Top level modules:
+	imm_extender
+
+} {} {}} C:/Users/gm523/Desktop/project/alu.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/alu.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} C:/Users/gm523/Desktop/project/data_memory_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/data_memory_wrapper.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module data_memory_wrapper
+
+Top level modules:
+	data_memory_wrapper
+
+} {} {}} C:/Users/gm523/Desktop/project/instruction_memory.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/instruction_memory.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module instruction_memory
+
+Top level modules:
+	instruction_memory
+
+} {} {}} C:/Users/gm523/Desktop/project/next_pc_logic_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/next_pc_logic_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module next_pc_logic_tb
+
+Top level modules:
+	next_pc_logic_tb
+
+} {} {}} C:/Users/gm523/Desktop/project/register_file.sv {0 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/register_file.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module register_file
+** Error (suppressible): C:/Users/gm523/Desktop/project/register_file.sv(24): (vlog-7061) Variable 'regs' driven in an always_ff block, may not be driven by any other process. See C:/Users/gm523/Desktop/project/register_file.sv(17).
+
+} {} {}} C:/Users/gm523/Desktop/project/mips_single_cycle_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/mips_single_cycle_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module mips_single_cycle_tb
+
+Top level modules:
+	mips_single_cycle_tb
+
+} {} {}} C:/Users/gm523/Desktop/project/memory_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/memory_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} C:/Users/gm523/Desktop/project/alu_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/alu_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module alu_tb
+
+Top level modules:
+	alu_tb
+
+} {} {}} C:/Users/gm523/Desktop/project/data_memory_wrapper_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/data_memory_wrapper_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module data_memory_wrapper_tb
+
+Top level modules:
+	data_memory_wrapper_tb
+
+} {} {}} C:/Users/gm523/Desktop/project/instruction_memory_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/instruction_memory_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module instruction_memory_tb
+
+Top level modules:
+	instruction_memory_tb
+
+} {} {}} C:/Users/gm523/Desktop/project/pc_reg.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/pc_reg.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module pc_reg
+
+Top level modules:
+	pc_reg
+
+} {} {}} C:/Users/gm523/Desktop/project/register_file_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/register_file_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module register_file_tb
+
+Top level modules:
+	register_file_tb
+
+} {} {}} C:/Users/gm523/Desktop/project/alu_control.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/alu_control.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module alu_control
+
+Top level modules:
+	alu_control
+
+} {} {}} C:/Users/gm523/Desktop/project/main_control_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/main_control_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module main_control_tb
+
+Top level modules:
+	main_control_tb
+
+} {} {}} C:/Users/gm523/Desktop/project/pc_reg_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/pc_reg_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module pc_reg_tb
+
+Top level modules:
+	pc_reg_tb
+
+} {} {}} C:/Users/gm523/Desktop/project/main_control.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/main_control.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module main_control
+
+Top level modules:
+	main_control
+
+} {} {}} C:/Users/gm523/Desktop/project/next_pc_logic.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/next_pc_logic.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module next_pc_logic
+
+Top level modules:
+	next_pc_logic
+
+} {} {}} C:/Users/gm523/Desktop/project/imm_extender_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/imm_extender_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module imm_extender_tb
+
+Top level modules:
+	imm_extender_tb
+
+} {} {}} C:/Users/gm523/Desktop/project/alu_control_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/gm523/Desktop/project/alu_control_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module alu_control_tb
+
+Top level modules:
+	alu_control_tb
+
+} {} {}}
