@@ -1,66 +1,93 @@
-module instruction_memory_tb();
-logic [31:0] i_addr;
-logic [31:0] o_instruction;
+`timescale 1ns/1ps
 
-instruction_memory u_instruction_memory_1 #(
-        .Mem_DEPTH(256),
-        .ISTRUCT_file("imem_test.hex")
-    ) dut (
+module instruction_memory_tb();
+
+    logic [31:0] i_addr;
+    logic [31:0] o_instruction;
+
+    integer pass_count;
+    integer fail_count;
+
+    instruction_memory #(.Mem_DEPTH(256)) u_instruction_memory (
         .i_addr(i_addr),
         .o_instruction(o_instruction)
     );
-	 
-	 
-	 initial begin
-	 //testing a random instruction file
-	 #10;
 
-	 i_addr = 32'd0;
-	 
-	 if(o_instruction !== 32'h20010007)
-	 $error("Error in test 1, expected 20010007, we got: %h",o_instruction);
-else
-$display ("test 1 works");
+    initial begin
 
+        pass_count = 0;
+        fail_count = 0;
+        i_addr = 32'd0;
 
+        // Test 1: Read instruction at address 0
+        #10;
 
-//test 2
+        if (o_instruction !== 32'h20010007) begin
+            $display("FAIL: Address 0. Expected 20010007, got %h",
+                     o_instruction);
+            fail_count = fail_count + 1;
+        end
+        else begin
+            $display("PASS: Address 0");
+            pass_count = pass_count + 1;
+        end
 
-#10;
-i_addr = 32'd4;
-	 
-	 if(o_instruction !== 32'h20020003)
-	 $error("Error in test 2, expected 20020003, we got: %h",o_instruction);
-else
-$display ("test 2 works, address 4");
+        // Test 2: Read instruction at address 4
+        i_addr = 32'd4;
+        #10;
 
-//test 3
+        if (o_instruction !== 32'h20020003) begin
+            $display("FAIL: Address 4. Expected 20020003, got %h",
+                     o_instruction);
+            fail_count = fail_count + 1;
+        end
+        else begin
+            $display("PASS: Address 4");
+            pass_count = pass_count + 1;
+        end
 
-#10;
-i_addr = 32'd8;
-	 
-	 if(o_instruction !== 32'h00221820)
-	 $error("Error in test 3, expected 00221820, we got: %h",o_instruction);
-else
-$display ("test 3 works, address 8");
+        // Test 3: Read instruction at address 8
+        i_addr = 32'd8;
+        #10;
 
-//test 4
+        if (o_instruction !== 32'h00221820) begin
+            $display("FAIL: Address 8. Expected 00221820, got %h",
+                     o_instruction);
+            fail_count = fail_count + 1;
+        end
+        else begin
+            $display("PASS: Address 8");
+            pass_count = pass_count + 1;
+        end
 
-#10;
-i_addr = 32'd12;
-	 
-	 if(o_instruction !== 32'h00222022)
-	 $error("Error in test 3, expected 00222022, we got: %h",o_instruction);
-else
-$display ("test 3 works, address 12");
+        // Test 4: Read instruction at address 12
+        i_addr = 32'd12;
+        #10;
 
-display("instruction_memory test complete");
-$finish;
+        if (o_instruction !== 32'h00222022) begin
+            $display("FAIL: Address 12. Expected 00222022, got %h",
+                     o_instruction);
+            fail_count = fail_count + 1;
+        end
+        else begin
+            $display("PASS: Address 12");
+            pass_count = pass_count + 1;
+        end
 
-end
+        // Final summary
+        $display("--------------------------------");
+        $display("INSTRUCTION MEMORY TEST SUMMARY");
+        $display("Passed tests: %0d", pass_count);
+        $display("Failed tests: %0d", fail_count);
+        $display("--------------------------------");
+
+        if (fail_count == 0)
+            $display("ALL TESTS PASSED");
+        else
+            $fatal(1, "TESTBENCH FAILED");
+
+        $finish;
+
+    end
 
 endmodule
-
-
-
-	 

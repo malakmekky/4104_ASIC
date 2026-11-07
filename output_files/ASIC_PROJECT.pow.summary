@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Fri Nov  6 19:38:06 2026
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : ASIC_PROJECT
+Top-level Entity Name : mips_de1_soc_top
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Power Models : Final
+Total Thermal Power Dissipation : 728.91 mW
+Core Dynamic Thermal Power Dissipation : 306.37 mW
+Core Static Thermal Power Dissipation : 413.15 mW
+I/O Thermal Power Dissipation : 9.40 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

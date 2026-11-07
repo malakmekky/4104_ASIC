@@ -9,7 +9,7 @@ module mips_de1_soc_top (
 
     // MIPS processor instance
     mips_single_cycle #(
-        .ISTRUCT_file("test_alu.hex")
+        .ISTRUCT_file("array_sum.hex")
     ) u_mips (
         .clk           (CLOCK_50),
         .rst_n         (KEY[0]),

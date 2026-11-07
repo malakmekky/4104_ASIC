@@ -1,12 +1,17 @@
-Analysis & Elaboration Status : Successful - Thu Oct 29 16:59:42 2026
+Analysis & Synthesis Status : Successful - Fri Nov  6 19:07:46 2026
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : ASIC_PROJECT
-Top-level Entity Name : mips_single_cycle
+Top-level Entity Name : mips_de1_soc_top
 Family : Cyclone V
-Logic utilization (in ALMs) : N/A until Partition Merge
-Total registers : N/A until Partition Merge
-Total pins : N/A until Partition Merge
-Total virtual pins : N/A until Partition Merge
-Total block memory bits : N/A until Partition Merge
-Total PLLs : N/A until Partition Merge
-Total DLLs : N/A until Partition Merge
+Logic utilization (in ALMs) : N/A
+Total registers : 10839
+Total pins : 5
+Total virtual pins : 64
+Total block memory bits : 21,632
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

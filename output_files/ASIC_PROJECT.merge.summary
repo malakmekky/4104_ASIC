@@ -1,0 +1,17 @@
+Partition Merge Status : Successful - Tue Nov  3 22:18:30 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
+Revision Name : ASIC_PROJECT
+Top-level Entity Name : mips_de1_soc_top
+Family : Cyclone V
+Logic utilization (in ALMs) : 7,327 / 32,070 ( 23 % )
+Total registers : 10862
+Total pins : 5 / 457 ( 1 % )
+Total virtual pins : 64
+Total block memory bits : 21,632 / 4,065,280 ( < 1 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,177 @@
+C:/Users/malakmekky/Downloads/project/project/project/instruction_memory.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/instruction_memory.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module instruction_memory
+
+Top level modules:
+	instruction_memory
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/alu.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/alu.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/data_memory_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/data_memory_wrapper.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module data_memory_wrapper
+
+Top level modules:
+	data_memory_wrapper
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/next_pc_logic_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/next_pc_logic_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module next_pc_logic_tb
+
+Top level modules:
+	next_pc_logic_tb
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/register_file.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/register_file.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module register_file
+
+Top level modules:
+	register_file
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/mips_single_cycle_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/mips_single_cycle_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module mips_single_cycle_tb
+
+Top level modules:
+	mips_single_cycle_tb
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/memory_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/memory_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/instruction_memory_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/instruction_memory_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module instruction_memory_tb
+
+Top level modules:
+	instruction_memory_tb
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/data_memory_wrapper_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/data_memory_wrapper_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module data_memory_wrapper_tb
+
+Top level modules:
+	data_memory_wrapper_tb
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/alu_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/alu_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module alu_tb
+
+Top level modules:
+	alu_tb
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/pc_reg.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/pc_reg.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module pc_reg
+
+Top level modules:
+	pc_reg
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/mips_de1_soc_top.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/mips_de1_soc_top.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module mips_de1_soc_top
+
+Top level modules:
+	mips_de1_soc_top
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/mips_single_cycle.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/mips_single_cycle.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module mips_single_cycle
+
+Top level modules:
+	mips_single_cycle
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/register_file_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/register_file_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module register_file_tb
+
+Top level modules:
+	register_file_tb
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/main_control_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/main_control_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module main_control_tb
+
+Top level modules:
+	main_control_tb
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/alu_control.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/alu_control.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module alu_control
+
+Top level modules:
+	alu_control
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/main_control.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/main_control.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module main_control
+
+Top level modules:
+	main_control
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/pc_reg_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/pc_reg_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module pc_reg_tb
+
+Top level modules:
+	pc_reg_tb
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/next_pc_logic.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/next_pc_logic.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module next_pc_logic
+
+Top level modules:
+	next_pc_logic
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/imm_extender_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/imm_extender_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module imm_extender_tb
+
+Top level modules:
+	imm_extender_tb
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/alu_control_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/alu_control_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module alu_control_tb
+
+Top level modules:
+	alu_control_tb
+
+} {} {}} C:/Users/malakmekky/Downloads/project/project/project/imm_extender.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/malakmekky/Downloads/project/project/project/imm_extender.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/malakmekky/Downloads/project/project/project/Project.mpf' is used as the ini file.
+-- Compiling module imm_extender
+
+Top level modules:
+	imm_extender
+
+} {} {}}

@@ -196,7 +196,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "o_instruction[19]",
+					"name" : "o_instruction[18]",
 					"strict" : false
 				},
 				{
@@ -208,7 +208,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "o_instruction[24]",
+					"name" : "o_instruction[26]",
 					"strict" : false
 				},
 				{
@@ -224,11 +224,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "o_instruction[31]",
 					"strict" : false
 				},
 				{
-					"name" : "rst_n",
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
 					"strict" : false
 				}
 			]

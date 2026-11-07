@@ -1,0 +1,1118 @@
+Partition Merge report for ASIC_PROJECT
+Tue Nov  3 22:18:30 2026
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Partition Merge Rapid Recompile Summary
+  5. Partition Merge Rapid Recompile Table of Changed Logic Entities
+  6. Connections to In-System Debugging Instance "auto_signaltap_0"
+  7. Partition Merge Partition Pin Processing
+  8. Partition Merge Resource Usage Summary
+  9. Partition Merge RAM Summary
+ 10. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++---------------------------------------------------------------------------------------+
+; Partition Merge Summary                                                               ;
++---------------------------------+-----------------------------------------------------+
+; Partition Merge Status          ; Successful - Tue Nov  3 22:18:30 2026               ;
+; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Standard Edition ;
+; Revision Name                   ; ASIC_PROJECT                                        ;
+; Top-level Entity Name           ; mips_de1_soc_top                                    ;
+; Family                          ; Cyclone V                                           ;
+; Logic utilization (in ALMs)     ; 7,327 / 32,070 ( 23 % )                             ;
+; Total registers                 ; 10862                                               ;
+; Total pins                      ; 5 / 457 ( 1 % )                                     ;
+; Total virtual pins              ; 64                                                  ;
+; Total block memory bits         ; 21,632 / 4,065,280 ( < 1 % )                        ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                      ;
+; Total HSSI RX PCSs              ; 0                                                   ;
+; Total HSSI PMA RX Deserializers ; 0                                                   ;
+; Total HSSI TX PCSs              ; 0                                                   ;
+; Total HSSI PMA TX Serializers   ; 0                                                   ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                       ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                       ;
++---------------------------------+-----------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                                   ;
++--------------------------------+----------------+--------------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used        ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+--------------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Source File              ; Source File            ;                                ;
+; sld_hub:auto_hub               ; Auto-generated ; Hybrid (Rapid Recompile) ; Post-Synthesis         ; sld_hub:auto_hub               ;
+; sld_signaltap:auto_signaltap_0 ; Auto-generated ; Hybrid (Rapid Recompile) ; Post-Synthesis         ; sld_signaltap:auto_signaltap_0 ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File              ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+--------------------------+------------------------+--------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Rapid Recompile Summary                                                                                                                                                                                                   ;
++--------------------------------+------------------------+--------------------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------+
+; Partition Name                 ; Rapid Recompile Status ; Netlist Preservation Requested ; Netlist Preservation Achieved ; Notes                                                                                                          ;
++--------------------------------+------------------------+--------------------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------+
+; Top                            ; Disengaged             ; 0.83% (102 / 12219)            ; 0.00% (0 / 12219)             ; Rapid Recompile disengaged: Design change is too large for Rapid Recompile, full compilation performed instead ;
+; sld_hub:auto_hub               ; Engaged                ; 100.00% (320 / 320)            ; 100.00% (320 / 320)           ;                                                                                                                ;
+; sld_signaltap:auto_signaltap_0 ; Engaged                ; 100.00% (4834 / 4834)          ; 100.00% (4834 / 4834)         ;                                                                                                                ;
++--------------------------------+------------------------+--------------------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Partition Merge Rapid Recompile Table of Changed Logic Entities                                              ;
++------------------------------------------------------------------------------------+-------------------------+
+; Changed Logic Entities                                                             ; Number of Changed Nodes ;
++------------------------------------------------------------------------------------+-------------------------+
+; |mips_de1_soc_top|mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1     ; 11277                   ;
+; |mips_de1_soc_top|mips_single_cycle:u_mips|register_file:u_register_file_1         ; 494                     ;
+; |mips_de1_soc_top                                                                  ; 238                     ;
+; |mips_de1_soc_top|mips_single_cycle:u_mips                                         ; 200                     ;
+; |mips_de1_soc_top|mips_single_cycle:u_mips|alu:u_alu_1                             ; 170                     ;
+; |mips_de1_soc_top|mips_single_cycle:u_mips|instruction_memory:u_instruction_memory ; 57                      ;
+; |mips_de1_soc_top|mips_single_cycle:u_mips|next_pc_logic:u_next_pc_logic_1         ; 54                      ;
+; |mips_de1_soc_top|mips_single_cycle:u_mips|pc_reg:u_pc_reg_1                       ; 38                      ;
+; |mips_de1_soc_top|mips_single_cycle:u_mips|main_control:u_main_control_1           ; 12                      ;
+; |mips_de1_soc_top|mips_single_cycle:u_mips|alu_control:u_alu_control_1             ; 7                       ;
++------------------------------------------------------------------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                                             ;
++------------------------------------------------------------------------------+---------------+-----------+--------------------------------+-------------------+----------------------------------------------------------------------------------+---------+
+; Name                                                                         ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                                                                ; Details ;
++------------------------------------------------------------------------------+---------------+-----------+--------------------------------+-------------------+----------------------------------------------------------------------------------+---------+
+; CLOCK_50                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; CLOCK_50                                                                         ; N/A     ;
+; KEY[0]                                                                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[0]                                                                           ; N/A     ;
+; KEY[0]                                                                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[0]                                                                           ; N/A     ;
+; KEY[1]                                                                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[1]                                                                           ; N/A     ;
+; KEY[1]                                                                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[1]                                                                           ; N/A     ;
+; KEY[2]                                                                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[2]                                                                           ; N/A     ;
+; KEY[2]                                                                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[2]                                                                           ; N/A     ;
+; KEY[3]                                                                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[3]                                                                           ; N/A     ;
+; KEY[3]                                                                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[3]                                                                           ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[0]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux31~6                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[0]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux31~6                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[10]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux21~2                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[10]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux21~2                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[11]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux20~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[11]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux20~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[12]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux19~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[12]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux19~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[13]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux18~2                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[13]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux18~2                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[14]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux17~0                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[14]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux17~0                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[15]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux16~0                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[15]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux16~0                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[16]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux15~0                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[16]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux15~0                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[17]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux14~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[17]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux14~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[18]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux13~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[18]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux13~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[19]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux12~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[19]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux12~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[1]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux30~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[1]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux30~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[20]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux11~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[20]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux11~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[21]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux10~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[21]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux10~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[22]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux9~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[22]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux9~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[23]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux8~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[23]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux8~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[24]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux7~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[24]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux7~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[25]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux6~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[25]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux6~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[26]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux5~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[26]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux5~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[27]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux4~0                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[27]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux4~0                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[28]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux3~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[28]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux3~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[29]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux2~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[29]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux2~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[2]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux29~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[2]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux29~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[30]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux1~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[30]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux1~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[31]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux0~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[31]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux0~1                                      ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[3]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux28~0                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[3]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux28~0                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[4]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux27~0                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[4]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux27~0                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[5]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux26~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[5]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux26~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[6]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux25~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[6]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux25~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[7]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux24~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[7]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux24~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[8]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux23~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[8]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux23~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[9]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux22~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|alu:u_alu_1|o_result[9]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|alu:u_alu_1|Mux22~1                                     ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[0]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[0]~0    ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[0]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[0]~0    ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[10] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[10]~1   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[10] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[10]~1   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[11] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[11]~2   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[11] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[11]~2   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[12] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[12]~3   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[12] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[12]~3   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[13] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[13]~4   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[13] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[13]~4   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[14] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[14]~5   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[14] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[14]~5   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[15] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[15]~6   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[15] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[15]~6   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[16] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[16]~7   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[16] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[16]~7   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[17] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[17]~8   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[17] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[17]~8   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[18] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[18]~9   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[18] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[18]~9   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[19] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[19]~10  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[19] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[19]~10  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[1]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[1]~11   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[1]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[1]~11   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[20] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[20]~12  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[20] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[20]~12  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[21] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[21]~13  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[21] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[21]~13  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[22] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[22]~14  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[22] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[22]~14  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[23] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[23]~15  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[23] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[23]~15  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[24] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[24]~16  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[24] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[24]~16  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[25] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[25]~17  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[25] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[25]~17  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[26] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[26]~18  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[26] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[26]~18  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[27] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[27]~19  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[27] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[27]~19  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[28] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[28]~20  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[28] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[28]~20  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[29] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[29]~21  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[29] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[29]~21  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[2]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[2]~22   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[2]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[2]~22   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[30] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[30]~23  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[30] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[30]~23  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[31] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[31]~24  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[31] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[31]~24  ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[3]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[3]~25   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[3]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[3]~25   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[4]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[4]~26   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[4]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[4]~26   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[5]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[5]~27   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[5]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[5]~27   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[6]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[6]~28   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[6]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[6]~28   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[7]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[7]~29   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[7]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[7]~29   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[8]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[8]~30   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[8]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[8]~30   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[9]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[9]~31   ; N/A     ;
+; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[9]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|data_memory_wrapper:u_data_memory_1|o_read_data[9]~31   ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_waddr[0]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_reg[0]~0                                          ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_waddr[0]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_reg[0]~0                                          ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_waddr[1]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_reg[1]~1                                          ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_waddr[1]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_reg[1]~1                                          ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_waddr[2]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_reg[2]~2                                          ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_waddr[2]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_reg[2]~2                                          ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_waddr[3]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_reg[3]~3                                          ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_waddr[3]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_reg[3]~3                                          ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_waddr[4]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_reg[3]~3                                          ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_waddr[4]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_reg[3]~3                                          ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[0]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[0]~0                                         ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[0]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[0]~0                                         ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[10]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[10]~1                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[10]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[10]~1                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[11]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[11]~2                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[11]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[11]~2                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[12]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[12]~3                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[12]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[12]~3                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[13]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[13]~4                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[13]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[13]~4                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[14]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[14]~5                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[14]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[14]~5                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[15]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[15]~6                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[15]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[15]~6                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[16]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[16]~7                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[16]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[16]~7                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[17]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[17]~8                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[17]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[17]~8                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[18]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[18]~9                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[18]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[18]~9                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[19]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[19]~10                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[19]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[19]~10                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[1]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[1]~11                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[1]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[1]~11                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[20]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[20]~12                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[20]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[20]~12                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[21]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[21]~13                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[21]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[21]~13                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[22]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[22]~14                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[22]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[22]~14                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[23]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[23]~15                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[23]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[23]~15                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[24]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[24]~16                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[24]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[24]~16                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[25]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[25]~17                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[25]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[25]~17                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[26]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[26]~18                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[26]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[26]~18                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[27]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[27]~19                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[27]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[27]~19                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[28]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[28]~20                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[28]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[28]~20                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[29]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[29]~21                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[29]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[29]~21                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[2]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[2]~22                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[2]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[2]~22                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[30]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[30]~23                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[30]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[30]~23                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[31]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[31]~24                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[31]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[31]~24                                       ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[3]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[3]~25                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[3]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[3]~25                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[4]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[4]~26                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[4]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[4]~26                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[5]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[5]~27                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[5]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[5]~27                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[6]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[6]~28                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[6]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[6]~28                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[7]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[7]~29                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[7]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[7]~29                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[8]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[8]~30                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[8]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[8]~30                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[9]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[9]~31                                        ; N/A     ;
+; mips_single_cycle:u_mips|register_file:u_register_file_1|i_wdata[9]          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|write_data[9]~31                                        ; N/A     ;
+; o_instruction[0]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~1           ; N/A     ;
+; o_instruction[0]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~1           ; N/A     ;
+; o_instruction[10]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[10]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[11]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~17          ; N/A     ;
+; o_instruction[11]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~17          ; N/A     ;
+; o_instruction[12]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~17          ; N/A     ;
+; o_instruction[12]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~17          ; N/A     ;
+; o_instruction[13]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[13]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[14]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[14]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[15]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[15]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[16]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~19          ; N/A     ;
+; o_instruction[16]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~19          ; N/A     ;
+; o_instruction[17]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~21          ; N/A     ;
+; o_instruction[17]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~21          ; N/A     ;
+; o_instruction[18]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~23          ; N/A     ;
+; o_instruction[18]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~23          ; N/A     ;
+; o_instruction[19]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[19]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[1]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~3           ; N/A     ;
+; o_instruction[1]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~3           ; N/A     ;
+; o_instruction[20]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[20]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[21]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~25          ; N/A     ;
+; o_instruction[21]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~25          ; N/A     ;
+; o_instruction[22]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~27          ; N/A     ;
+; o_instruction[22]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~27          ; N/A     ;
+; o_instruction[23]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[23]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[24]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[24]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[25]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[25]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[26]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~29          ; N/A     ;
+; o_instruction[26]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~29          ; N/A     ;
+; o_instruction[27]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~31          ; N/A     ;
+; o_instruction[27]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~31          ; N/A     ;
+; o_instruction[28]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~32          ; N/A     ;
+; o_instruction[28]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~32          ; N/A     ;
+; o_instruction[29]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~34_wirecell ; N/A     ;
+; o_instruction[29]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~34_wirecell ; N/A     ;
+; o_instruction[2]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~5           ; N/A     ;
+; o_instruction[2]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~5           ; N/A     ;
+; o_instruction[30]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[30]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_instruction[31]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~29          ; N/A     ;
+; o_instruction[31]                                                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~29          ; N/A     ;
+; o_instruction[3]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~7           ; N/A     ;
+; o_instruction[3]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~7           ; N/A     ;
+; o_instruction[4]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~9           ; N/A     ;
+; o_instruction[4]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~9           ; N/A     ;
+; o_instruction[5]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~11          ; N/A     ;
+; o_instruction[5]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~11          ; N/A     ;
+; o_instruction[6]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~13          ; N/A     ;
+; o_instruction[6]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~13          ; N/A     ;
+; o_instruction[7]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[7]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[8]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[8]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[9]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_instruction[9]                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|instruction_memory:u_instruction_memory|mem~16          ; N/A     ;
+; o_pc[0]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_pc[0]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_pc[10]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[10]                              ; N/A     ;
+; o_pc[10]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[10]                              ; N/A     ;
+; o_pc[11]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[11]                              ; N/A     ;
+; o_pc[11]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[11]                              ; N/A     ;
+; o_pc[12]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[12]                              ; N/A     ;
+; o_pc[12]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[12]                              ; N/A     ;
+; o_pc[13]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[13]                              ; N/A     ;
+; o_pc[13]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[13]                              ; N/A     ;
+; o_pc[14]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[14]                              ; N/A     ;
+; o_pc[14]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[14]                              ; N/A     ;
+; o_pc[15]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[15]                              ; N/A     ;
+; o_pc[15]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[15]                              ; N/A     ;
+; o_pc[16]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[16]                              ; N/A     ;
+; o_pc[16]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[16]                              ; N/A     ;
+; o_pc[17]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[17]                              ; N/A     ;
+; o_pc[17]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[17]                              ; N/A     ;
+; o_pc[18]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[18]                              ; N/A     ;
+; o_pc[18]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[18]                              ; N/A     ;
+; o_pc[19]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[19]                              ; N/A     ;
+; o_pc[19]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[19]                              ; N/A     ;
+; o_pc[1]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_pc[1]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                             ; N/A     ;
+; o_pc[20]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[20]                              ; N/A     ;
+; o_pc[20]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[20]                              ; N/A     ;
+; o_pc[21]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[21]                              ; N/A     ;
+; o_pc[21]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[21]                              ; N/A     ;
+; o_pc[22]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[22]                              ; N/A     ;
+; o_pc[22]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[22]                              ; N/A     ;
+; o_pc[23]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[23]                              ; N/A     ;
+; o_pc[23]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[23]                              ; N/A     ;
+; o_pc[24]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[24]                              ; N/A     ;
+; o_pc[24]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[24]                              ; N/A     ;
+; o_pc[25]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[25]                              ; N/A     ;
+; o_pc[25]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[25]                              ; N/A     ;
+; o_pc[26]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[26]                              ; N/A     ;
+; o_pc[26]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[26]                              ; N/A     ;
+; o_pc[27]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[27]                              ; N/A     ;
+; o_pc[27]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[27]                              ; N/A     ;
+; o_pc[28]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[28]                              ; N/A     ;
+; o_pc[28]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[28]                              ; N/A     ;
+; o_pc[29]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[29]                              ; N/A     ;
+; o_pc[29]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[29]                              ; N/A     ;
+; o_pc[2]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[2]                               ; N/A     ;
+; o_pc[2]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[2]                               ; N/A     ;
+; o_pc[30]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[30]                              ; N/A     ;
+; o_pc[30]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[30]                              ; N/A     ;
+; o_pc[31]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[31]                              ; N/A     ;
+; o_pc[31]                                                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[31]                              ; N/A     ;
+; o_pc[3]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[3]                               ; N/A     ;
+; o_pc[3]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[3]                               ; N/A     ;
+; o_pc[4]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[4]                               ; N/A     ;
+; o_pc[4]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[4]                               ; N/A     ;
+; o_pc[5]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[5]                               ; N/A     ;
+; o_pc[5]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[5]                               ; N/A     ;
+; o_pc[6]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[6]                               ; N/A     ;
+; o_pc[6]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[6]                               ; N/A     ;
+; o_pc[7]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[7]                               ; N/A     ;
+; o_pc[7]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[7]                               ; N/A     ;
+; o_pc[8]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[8]                               ; N/A     ;
+; o_pc[8]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[8]                               ; N/A     ;
+; o_pc[9]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[9]                               ; N/A     ;
+; o_pc[9]                                                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mips_single_cycle:u_mips|pc_reg:u_pc_reg_1|o_pc[9]                               ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc                                                         ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
++------------------------------------------------------------------------------+---------------+-----------+--------------------------------+-------------------+----------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                                               ;
++---------------------------------------------------+-----------+---------------+----------+-------------+
+; Name                                              ; Partition ; Type          ; Location ; Status      ;
++---------------------------------------------------+-----------+---------------+----------+-------------+
+; CLOCK_50                                          ; Top       ; Input Port    ; n/a      ;             ;
+;     -- CLOCK_50                                   ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- CLOCK_50~input                             ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; KEY[0]                                            ; Top       ; Input Port    ; n/a      ;             ;
+;     -- KEY[0]                                     ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- KEY[0]~input                               ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; KEY[1]                                            ; Top       ; Input Port    ; n/a      ;             ;
+;     -- KEY[1]                                     ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- KEY[1]~input                               ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; KEY[2]                                            ; Top       ; Input Port    ; n/a      ;             ;
+;     -- KEY[2]                                     ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- KEY[2]~input                               ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; KEY[3]                                            ; Top       ; Input Port    ; n/a      ;             ;
+;     -- KEY[3]                                     ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- KEY[3]~input                               ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; altera_reserved_tck                               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tck                        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tck~input                  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; altera_reserved_tdi                               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tdi                        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tdi~input                  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; altera_reserved_tdo                               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- altera_reserved_tdo                        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tdo~output                 ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; altera_reserved_tms                               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tms                        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tms~input                  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[0]                                  ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[0]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[0]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[10]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[10]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[10]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[11]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[11]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[11]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[12]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[12]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[12]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[13]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[13]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[13]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[14]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[14]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[14]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[15]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[15]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[15]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[16]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[16]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[16]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[17]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[17]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[17]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[18]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[18]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[18]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[19]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[19]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[19]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[1]                                  ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[1]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[1]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[20]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[20]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[20]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[21]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[21]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[21]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[22]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[22]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[22]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[23]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[23]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[23]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[24]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[24]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[24]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[25]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[25]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[25]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[26]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[26]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[26]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[27]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[27]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[27]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[28]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[28]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[28]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[29]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[29]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[29]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[2]                                  ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[2]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[2]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[30]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[30]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[30]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[31]                                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[31]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[31]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[3]                                  ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[3]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[3]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[4]                                  ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[4]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[4]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[5]                                  ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[5]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[5]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[6]                                  ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[6]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[6]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[7]                                  ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[7]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[7]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[8]                                  ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[8]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[8]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_instruction[9]                                  ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_instruction[9]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_instruction[9]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[0]                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[0]                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[0]~output                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[10]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[10]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[10]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[11]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[11]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[11]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[12]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[12]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[12]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[13]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[13]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[13]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[14]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[14]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[14]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[15]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[15]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[15]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[16]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[16]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[16]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[17]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[17]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[17]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[18]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[18]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[18]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[19]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[19]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[19]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[1]                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[1]                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[1]~output                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[20]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[20]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[20]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[21]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[21]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[21]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[22]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[22]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[22]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[23]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[23]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[23]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[24]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[24]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[24]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[25]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[25]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[25]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[26]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[26]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[26]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[27]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[27]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[27]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[28]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[28]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[28]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[29]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[29]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[29]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[2]                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[2]                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[2]~output                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[30]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[30]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[30]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[31]                                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[31]                                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[31]~output                            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[3]                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[3]                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[3]~output                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[4]                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[4]                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[4]~output                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[5]                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[5]                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[5]~output                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[6]                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[6]                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[6]~output                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[7]                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[7]                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[7]~output                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[8]                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[8]                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[8]~output                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; o_pc[9]                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- o_pc[9]                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- o_pc[9]~output                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_0_             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_10_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_11_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_12_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_13_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_14_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_15_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_16_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_17_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_18_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_19_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_1_             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_20_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_21_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_22_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_23_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_24_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_25_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_26_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_27_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_28_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_29_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_2_             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_30_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_31_            ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_3_             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_4_             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_5_             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_6_             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_7_             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_8_             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_alu_1_o_result_9_             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_0_  ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_10_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_11_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_12_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_13_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_14_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_15_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_16_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_17_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_18_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_19_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_1_  ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_20_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_21_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_22_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_23_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_24_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_25_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_26_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_27_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_28_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_29_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_2_  ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_30_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_31_ ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_3_  ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_4_  ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_5_  ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_6_  ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_7_  ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_8_  ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_data_memory_1_o_read_data_9_  ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_waddr_0_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_waddr_1_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_waddr_2_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_waddr_3_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_waddr_4_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_0_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_10_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_11_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_12_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_13_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_14_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_15_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_16_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_17_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_18_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_19_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_1_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_20_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_21_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_22_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_23_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_24_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_25_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_26_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_27_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_28_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_29_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_2_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_30_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_31_   ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_3_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_4_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_5_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_6_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_7_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_8_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
+; pre_syn.bp.u_mips_u_register_file_1_i_wdata_9_    ; Top       ; Output Port   ; n/a      ;             ;
+;                                                   ;           ;               ;          ;             ;
++---------------------------------------------------+-----------+---------------+----------+-------------+
+
+
++--------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                       ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 7104           ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 4117           ;
+;     -- 7 input functions                    ; 16             ;
+;     -- 6 input functions                    ; 3031           ;
+;     -- 5 input functions                    ; 311            ;
+;     -- 4 input functions                    ; 123            ;
+;     -- <=3 input functions                  ; 636            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 10862          ;
+;                                             ;                ;
+; Virtual pins                                ; 64             ;
+; I/O pins                                    ; 5              ;
+; Total MLAB memory bits                      ; 0              ;
+; Total block memory bits                     ; 21632          ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 9908           ;
+; Total fan-out                               ; 55931          ;
+; Average fan-out                             ; 3.44           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_6f84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 169          ; 128          ; 169          ; 21632 ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Partition Merge
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
+    Info: Processing started: Tue Nov  3 22:18:12 2026
+Info: Command: quartus_cdb --read_settings_files=on --write_settings_files=off ASIC_PROJECT -c ASIC_PROJECT --merge=on --recompile=on
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (35007): Using synthesis netlist for partition "Top"
+Info (12849): Using Hybrid (Rapid Recompile) netlist for partition "sld_hub:auto_hub"
+Info (12849): Using Hybrid (Rapid Recompile) netlist for partition "sld_signaltap:auto_signaltap_0"
+Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 371 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info (35002): Resolved and merged 3 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (15717): Design contains 64 virtual pins; timing numbers associated with paths containing virtual pins are estimates
+    Info (15719): Pin "o_pc[0]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[1]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[2]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[3]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[4]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[5]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[6]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[7]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[8]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[9]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[10]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[11]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[12]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[13]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[14]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[15]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[16]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[17]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[18]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[19]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[20]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[21]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[22]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[23]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[24]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[25]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[26]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[27]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[28]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[29]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[30]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_pc[31]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 6
+    Info (15719): Pin "o_instruction[0]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[1]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[2]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[3]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[4]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[5]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[6]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[7]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[8]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[9]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[10]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[11]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[12]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[13]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[14]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[15]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[16]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[17]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[18]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[19]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[20]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[21]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[22]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[23]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[24]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[25]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[26]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[27]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[28]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[29]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[30]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+    Info (15719): Pin "o_instruction[31]" is virtual output pin File: C:/Users/Jimmy2303/Desktop/project/project/mips_de1_soc_top.sv Line: 8
+Info (21057): Implemented 14758 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 14743 logic cells
+    Info (21064): Implemented 5 RAM segments
+Info: Quartus Prime Partition Merge was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 5060 megabytes
+    Info: Processing ended: Tue Nov  3 22:18:31 2026
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:05
+
+

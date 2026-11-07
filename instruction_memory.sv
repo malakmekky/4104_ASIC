@@ -1,6 +1,6 @@
 module instruction_memory #(
     parameter Mem_DEPTH = 256,
-    parameter ISTRUCT_file = "test_alu.hex"
+    parameter ISTRUCT_file = "array_sum.hex"
 )(
     input  logic [31:0] i_addr,
     output logic [31:0] o_instruction

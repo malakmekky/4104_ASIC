@@ -1,16 +1,16 @@
-Fitter Status : Successful - Thu Oct 29 16:50:47 2026
+Fitter Status : Successful - Fri Nov  6 19:11:10 2026
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : ASIC_PROJECT
-Top-level Entity Name : mips_single_cycle
+Top-level Entity Name : mips_de1_soc_top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 45 / 32,070 ( < 1 % )
-Total registers : 44
-Total pins : 66 / 457 ( 14 % )
-Total virtual pins : 0
-Total block memory bits : 0 / 4,065,280 ( 0 % )
-Total RAM Blocks : 0 / 397 ( 0 % )
+Logic utilization (in ALMs) : 5,171 / 32,070 ( 16 % )
+Total registers : 10902
+Total pins : 5 / 457 ( 1 % )
+Total virtual pins : 64
+Total block memory bits : 21,632 / 4,065,280 ( < 1 % )
+Total RAM Blocks : 5 / 397 ( 1 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

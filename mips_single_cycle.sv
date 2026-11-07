@@ -1,5 +1,5 @@
 module mips_single_cycle #(
-    parameter ISTRUCT_file = "test_alu.hex"
+    parameter ISTRUCT_file = "array_sum.hex"
 ) (
     input  logic        clk,
     input  logic        rst_n,
